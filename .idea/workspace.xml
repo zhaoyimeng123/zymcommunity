@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df9cf87a-312e-456d-9d5f-11c0e6d9f8e8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zym/community/controller/AuthorizeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zym/community/controller/AuthorizeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="df9cf87a-312e-456d-9d5f-11c0e6d9f8e8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +59,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -105,7 +100,7 @@
       <updated>1584185374332</updated>
       <workItem from="1584185377302" duration="1996000" />
       <workItem from="1584187916464" duration="8688000" />
-      <workItem from="1584197623020" duration="4528000" />
+      <workItem from="1584197623020" duration="4737000" />
     </task>
     <servers />
   </component>
@@ -131,6 +126,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="740" y="100" width="704" height="634" maximized="true" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1584199933497" />
+    <state x="821" y="176" key="FileChooserDialogImpl" timestamp="1584232636203">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="821" y="176" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1584232636203" />
     <state x="917" y="332" width="373" height="170" key="Github.CreateGistDialog" timestamp="1584189169425">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -167,6 +166,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="846" height="218" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1584231924832" />
+    <state x="544" y="63" key="SettingsEditor" timestamp="1584232657211">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="544" y="63" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1584232657211" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1584198127674">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
