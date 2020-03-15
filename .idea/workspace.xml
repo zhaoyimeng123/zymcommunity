@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df9cf87a-312e-456d-9d5f-11c0e6d9f8e8" name="Default Changelist" comment="" />
+    <list default="true" id="df9cf87a-312e-456d-9d5f-11c0e6d9f8e8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zym/community/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zym/community/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community.iml" beforeDir="false" afterPath="$PROJECT_DIR$/community.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zym/community/controller/AuthorizeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zym/community/controller/AuthorizeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +18,43 @@
   </component>
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="zymcommunity@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="zymcommunity@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="zymcommunity@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="zymcommunity: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="zymcommunity@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="zymcommunity: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="user: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -44,6 +90,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="h2&#10;mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -81,7 +128,17 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:zymcommunity@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:zymcommunity@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@5be947f5" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -100,7 +157,7 @@
       <updated>1584185374332</updated>
       <workItem from="1584185377302" duration="1996000" />
       <workItem from="1584187916464" duration="8688000" />
-      <workItem from="1584197623020" duration="4737000" />
+      <workItem from="1584197623020" duration="9224000" />
     </task>
     <servers />
   </component>
@@ -118,10 +175,14 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="897" y="111" key="#com.intellij.ide.util.MemberChooser" timestamp="1584195081990">
+    <state x="685" y="79" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584234461788">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="897" y="111" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1584195081990" />
+    <state x="685" y="79" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1584234461788" />
+    <state x="897" y="111" key="#com.intellij.ide.util.MemberChooser" timestamp="1584236703364">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="897" y="111" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1584236703364" />
     <state x="740" y="100" width="704" height="634" maximized="true" key="DiffContextDialog" timestamp="1584199933497">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -134,38 +195,42 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="917" y="332" width="373" height="170" key="Github.CreateGistDialog/0.0.1536.834@0.0.1536.834" timestamp="1584189169425" />
-    <state width="846" height="218" key="GridCell.Tab.0.bottom" timestamp="1584231924831">
+    <state width="796" height="117" key="GridCell.Tab.0.bottom" timestamp="1584236951557">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="846" height="218" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584231924831" />
-    <state width="846" height="218" key="GridCell.Tab.0.center" timestamp="1584231924831">
+    <state width="796" height="117" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584236951557" />
+    <state width="796" height="117" key="GridCell.Tab.0.center" timestamp="1584236951557">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="846" height="218" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1584231924831" />
-    <state width="846" height="218" key="GridCell.Tab.0.left" timestamp="1584231924831">
+    <state width="796" height="117" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1584236951557" />
+    <state width="796" height="117" key="GridCell.Tab.0.left" timestamp="1584236951555">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="846" height="218" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1584231924831" />
-    <state width="846" height="218" key="GridCell.Tab.0.right" timestamp="1584231924831">
+    <state width="796" height="117" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1584236951555" />
+    <state width="796" height="117" key="GridCell.Tab.0.right" timestamp="1584236951557">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="846" height="218" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1584231924831" />
-    <state width="846" height="218" key="GridCell.Tab.1.bottom" timestamp="1584231924832">
+    <state width="796" height="117" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1584236951557" />
+    <state width="796" height="117" key="GridCell.Tab.1.bottom" timestamp="1584236951557">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="846" height="218" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584231924832" />
-    <state width="846" height="218" key="GridCell.Tab.1.center" timestamp="1584231924832">
+    <state width="796" height="117" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584236951557" />
+    <state width="796" height="117" key="GridCell.Tab.1.center" timestamp="1584236951557">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="846" height="218" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1584231924832" />
-    <state width="846" height="218" key="GridCell.Tab.1.left" timestamp="1584231924831">
+    <state width="796" height="117" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1584236951557" />
+    <state width="796" height="117" key="GridCell.Tab.1.left" timestamp="1584236951557">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="846" height="218" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1584231924831" />
-    <state width="846" height="218" key="GridCell.Tab.1.right" timestamp="1584231924832">
+    <state width="796" height="117" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1584236951557" />
+    <state width="796" height="117" key="GridCell.Tab.1.right" timestamp="1584236951557">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="846" height="218" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1584231924832" />
+    <state width="796" height="117" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1584236951557" />
+    <state width="212" height="477" key="HiddenNamespacesPopup" timestamp="1584233932166">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="212" height="477" key="HiddenNamespacesPopup/0.0.1536.834@0.0.1536.834" timestamp="1584233932166" />
     <state x="544" y="63" key="SettingsEditor" timestamp="1584232657211">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -174,5 +239,13 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.834@0.0.1536.834" timestamp="1584198127674" />
+    <state x="809" y="66" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1584233758810">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="809" y="66" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.834@0.0.1536.834" timestamp="1584233758810" />
+    <state x="944" y="179" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1584233444199">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="944" y="179" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1536.834@0.0.1536.834" timestamp="1584233444199" />
   </component>
 </project>
