@@ -1,17 +1,19 @@
 package com.zym.community.controller;
 
+import com.zym.community.dto.QuestionDTO;
 import com.zym.community.mapper.QuestionMapper;
 import com.zym.community.model.Question;
 import com.zym.community.model.User;
+import com.zym.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 /**
  * @author
@@ -21,7 +23,18 @@ import javax.servlet.http.HttpSession;
 public class PublishController {
 
     @Autowired
-    private QuestionMapper questionMapper;
+    private QuestionService questionService;
+
+    @GetMapping("/publish/{id}")
+    public String edit(@PathVariable(name = "id")Integer id,
+                       Model model){
+        QuestionDTO question = questionService.getById(id);
+        model.addAttribute("title",question.getTitle());
+        model.addAttribute("description",question.getDescription());
+        model.addAttribute("tag",question.getTag());
+        model.addAttribute("id",question.getId());
+        return "publish";
+    }
 
 
     @GetMapping("/publish")
@@ -34,6 +47,7 @@ public class PublishController {
                             @RequestParam("description")String description,
                             @RequestParam("tag")String tag,
                             HttpServletRequest request,
+                            @RequestParam(value = "id",required = false)Integer id,
                             Model model){
         model.addAttribute("title",title);
         model.addAttribute("description",description);
@@ -60,9 +74,9 @@ public class PublishController {
             return "publish";
         }
         question.setCreator(user.getId());
-        question.setGmtCreate(System.currentTimeMillis());
-        question.setGmtModified(System.currentTimeMillis());
-        questionMapper.create(question);
+
+        question.setId(id);
+        questionService.createOrUpdate(question);
         return "redirect:/";
     }
 }

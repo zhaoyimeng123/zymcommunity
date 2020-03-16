@@ -2,6 +2,8 @@ package com.zym.community.service;
 
 import com.zym.community.dto.PaginationDTO;
 import com.zym.community.dto.QuestionDTO;
+import com.zym.community.exception.CustomizeErrorCode;
+import com.zym.community.exception.CustomizeException;
 import com.zym.community.mapper.QuestionMapper;
 import com.zym.community.mapper.UserMapper;
 import com.zym.community.model.Question;
@@ -38,6 +40,9 @@ public class QuestionService {
         }
 
         Integer offset = size * (page - 1);
+        if (offset<0){
+            offset = 0;
+        }
         List<Question> questions = questionMapper.findAllQuestion(offset,size);
         List<QuestionDTO> questionDTOList = new ArrayList<>();
 
@@ -50,5 +55,37 @@ public class QuestionService {
         }
         paginationDTO.setQuestions(questionDTOList);
         return paginationDTO;
+    }
+
+    public QuestionDTO getById(Integer id) {
+        Question question = questionMapper.getById(id);
+        if (question == null){
+            throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
+        }
+        QuestionDTO questionDTO = new QuestionDTO();
+        BeanUtils.copyProperties(question,questionDTO);
+        User user = userMapper.findById(question.getCreator());
+        questionDTO.setUser(user);
+        return questionDTO;
+    }
+
+    public void createOrUpdate(Question question) {
+        if (question.getId()==null){
+            //创建
+            question.setCommentCount(0);
+            question.setViewCount(0);
+            question.setLikeCount(0);
+            question.setGmtCreate(System.currentTimeMillis());
+            question.setGmtModified(System.currentTimeMillis());
+            questionMapper.create(question);
+        }else {
+            //更新
+            question.setGmtModified(System.currentTimeMillis());
+            questionMapper.update(question);
+        }
+    }
+
+    public void incView(Integer id) {
+        questionMapper.incViewByQuesId(id);
     }
 }
