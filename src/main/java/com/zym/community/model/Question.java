@@ -13,13 +13,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Question {
 
-    private Integer id;
+    private long id;
     private String title;
     private String tag;
     private String description;
     private Long gmtCreate;
     private Long gmtModified;
-    private Integer creator;
+    private long creator;
     private Integer viewCount;
     private Integer likeCount;
     private Integer commentCount;

@@ -1,5 +1,6 @@
 package com.zym.community.controller;
 
+import com.zym.community.cache.TagCache;
 import com.zym.community.dto.QuestionDTO;
 import com.zym.community.mapper.QuestionMapper;
 import com.zym.community.model.Question;
@@ -33,12 +34,14 @@ public class PublishController {
         model.addAttribute("description",question.getDescription());
         model.addAttribute("tag",question.getTag());
         model.addAttribute("id",question.getId());
+
         return "publish";
     }
 
 
     @GetMapping("/publish")
-    public String publish(){
+    public String publish(Model model){
+       // model.addAttribute("tags", TagCache.get());
         return "publish";
     }
 
@@ -47,11 +50,12 @@ public class PublishController {
                             @RequestParam("description")String description,
                             @RequestParam("tag")String tag,
                             HttpServletRequest request,
-                            @RequestParam(value = "id",required = false)Integer id,
+                            @RequestParam(value = "id",required = false,defaultValue = "0")Integer id,
                             Model model){
         model.addAttribute("title",title);
         model.addAttribute("description",description);
         model.addAttribute("tag",tag);
+
         if (title==null || title==""){
             model.addAttribute("error","标题不能为空");
             return "/publish";

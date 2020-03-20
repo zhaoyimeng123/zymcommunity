@@ -8,6 +8,7 @@ import com.zym.community.mapper.QuestionMapper;
 import com.zym.community.mapper.UserMapper;
 import com.zym.community.model.Question;
 import com.zym.community.model.User;
+import org.apache.ibatis.jdbc.Null;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -70,7 +71,7 @@ public class QuestionService {
     }
 
     public void createOrUpdate(Question question) {
-        if (question.getId()==null){
+        if (question.getId()==0){
             //创建
             question.setCommentCount(0);
             question.setViewCount(0);
@@ -85,7 +86,7 @@ public class QuestionService {
         }
     }
 
-    public void incView(Integer id) {
+    public void incView(long id) {
         questionMapper.incViewByQuesId(id);
     }
 }

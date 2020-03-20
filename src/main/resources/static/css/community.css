@@ -28,3 +28,32 @@ body{
     color:#999;
     font-size: 14px;
 }
+.menu{
+    color: #999;
+    margin-top: 5px;
+}
+.menu .icon{
+    margin-right: 6px;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+.menu .active{
+    color: #2aabd2;
+
+}
+.comments{
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+.menu .icon:hover{
+    color: #2aabd2;
+}
+.sub-comments{
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid #eee;
+    padding-top: 15px;
+    margin-bottom: 15px;
+}

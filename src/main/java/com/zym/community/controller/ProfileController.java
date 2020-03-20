@@ -2,11 +2,13 @@ package com.zym.community.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.zym.community.dto.NotificationDTO;
 import com.zym.community.dto.PaginationDTO;
 import com.zym.community.mapper.QuestionMapper;
 import com.zym.community.mapper.UserMapper;
 import com.zym.community.model.Question;
 import com.zym.community.model.User;
+import com.zym.community.service.NotificationService;
 import com.zym.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,7 +32,7 @@ public class ProfileController {
     private QuestionMapper questionMapper;
 
     @Autowired
-    private QuestionService questionService;
+    private NotificationService notificationService;
     @Autowired
     private UserMapper userMapper;
 
@@ -50,18 +52,21 @@ public class ProfileController {
         if ("questions".equals(action)){
             model.addAttribute("section","questions");
             model.addAttribute("sectionName","我的问题");
+            PageHelper.startPage(page,size);
+            List<Question> allQuestionByUserId = questionMapper.findAllQuestionByUserId(user.getId());
+            PageInfo<Question> questionPageInfo = new PageInfo<>(allQuestionByUserId,5);
+            model.addAttribute("questionPageInfo",questionPageInfo);
 
         }else if ("replies".equals(action)){
             model.addAttribute("section","replies");
             model.addAttribute("sectionName","最新回复");
+            List<NotificationDTO> notificationMsg = notificationService.getNotificationMsg(user);
+            int notificationCount = notificationMsg.size();
+            model.addAttribute("notificationCount",notificationCount);
+            model.addAttribute("notifications",notificationMsg);
 
         }
-        System.out.println("userId="+user.getId());
-        PageHelper.startPage(page,size);
-        List<Question> allQuestionByUserId = questionMapper.findAllQuestionByUserId(user.getId());
-        PageInfo<Question> questionPageInfo = new PageInfo<>(allQuestionByUserId,5);
-        System.out.println("allQuestionByUserId="+questionPageInfo);
-        model.addAttribute("questionPageInfo",questionPageInfo);
+
         return "profile";
     }
 }
