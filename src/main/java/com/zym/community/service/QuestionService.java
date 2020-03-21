@@ -8,6 +8,7 @@ import com.zym.community.mapper.QuestionMapper;
 import com.zym.community.mapper.UserMapper;
 import com.zym.community.model.Question;
 import com.zym.community.model.User;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.jdbc.Null;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,15 @@ public class QuestionService {
     @Autowired
     private UserMapper userMapper;
 
-    public PaginationDTO findAllQuestion(Integer page, Integer size) {
+    public PaginationDTO findAllQuestion(String search,Integer page, Integer size) {
+
+        //搜索功能
+        if(StringUtils.isNotBlank(search)){
+            search.replace(" ","|");
+
+        }
+
+
         PaginationDTO paginationDTO = new PaginationDTO();
         Integer totalCount = questionMapper.count();
         paginationDTO.setPagination(totalCount,page,size);

@@ -1,0 +1,12 @@
+2020-03-21 11:21:26.294  INFO 22232 --- [main] com.zym.community.CommunityApplication   : Starting CommunityApplication on mengmeng with PID 22232 (started by 蒙哥哥 in F:\IntelliJ IDEA 2019.3.1\workspace\community)
+2020-03-21 11:21:26.296  INFO 22232 --- [main] com.zym.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2020-03-21 11:21:26.452  WARN 22232 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-03-21 11:21:27.565  INFO 22232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2020-03-21 11:21:27.584  INFO 22232 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-21 11:21:27.585  INFO 22232 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-21 11:21:27.737  INFO 22232 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-21 11:21:27.738  INFO 22232 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1387 ms
+2020-03-21 11:21:28.215  INFO 22232 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-21 11:21:28.285  INFO 22232 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-21 11:21:28.491  INFO 22232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2020-03-21 11:21:28.499  INFO 22232 --- [main] com.zym.community.CommunityApplication   : Started CommunityApplication in 2.691 seconds (JVM running for 3.932)
